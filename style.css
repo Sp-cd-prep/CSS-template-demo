@@ -1,0 +1,261 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.navbar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 90px;
+    background-color:whitesmoke;
+    
+    padding: 0 20px; 
+    /* position: relative; */
+}
+
+.logo{
+    display: flex;
+
+    align-items: center;
+}
+
+/* // */
+.logo img{
+    margin-right: 10px;
+}
+.logo-text h1, .logo-text h4 {
+    margin: 0;
+  }
+
+a{
+    text-decoration: none;
+    color: gray;
+    font-size: 25px;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+}
+
+.navbar-menu{
+    display: flex;
+    gap: 30px;
+}
+
+.cread{
+    display: flex;
+
+}
+
+.register{
+    padding:10px 20px;
+font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.login{
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    background-color: orangered;
+    border-radius: 30px;
+    /* padding: 20px; */
+}
+
+
+.hamburger{
+    display: none;
+    flex-direction: column;
+    /* font-size: 30px; */
+    cursor: pointer;
+}
+.hamburger .bar {
+    width: 25px;
+    height: 3px;
+    background-color: gray;
+    margin: 4px 0;
+  }
+  
+  .toggle-checkbox {
+    display: none;
+  }
+
+
+
+.main-card{
+    background-image: url("./close-up-young-business-team-working.jpg");
+    background-size: cover;
+    height: 600px;
+}
+
+
+.bg-color{
+    background-color: #5d52ba;
+    opacity: 0.65;
+    height: 100%;
+    width: 100%;
+    color: white;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    position: relative;
+    bottom: 400px;
+    
+
+}
+
+
+.left{
+    width: 30%;
+    color: white;
+}
+.right{
+    color: white;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 30px;
+    background-color: blueviolet;
+    padding: 30px;
+    border-radius: 30px;
+}
+
+span{
+    padding: 10px;
+}
+
+span:nth-child(n+2){
+    border: 1px solid white;
+    border-radius: 20px;
+}
+
+.form{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+input{
+    height: 50px;
+    border-radius: 30px;
+}
+
+.job{
+    flex: 1 0 40%;
+}
+.loc{
+    flex: 1 0 40%;
+}
+
+.form-btn{
+    background-color: #3e3684;
+    border-radius: 30px;
+    height: 50px;
+    flex: 1 0 100%;
+}
+
+.form-btn:hover{
+    background-color: aqua;
+}
+
+
+.browser{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+    align-items: center;
+    height: 400px;
+}
+
+.box{
+    width: 150px;
+    height: 150px;
+    border: 10px solid rgb(105, 66, 247);
+    background-color: blueviolet;
+    border-radius: 50%;
+    transition: all 0.7s ease;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.inside-box{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgb(127, 170, 255);
+    position: absolute;
+    top: -20px;
+    right: 0px;
+}
+
+.box:hover{
+    border-color: whitesmoke;
+
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+i{
+   color: white ;
+}
+
+
+@media only screen and (min-width:300px) and (max-width:600px){
+   
+    .logo-text h1,h4{
+        display: none;
+    }
+    .navbar-menu{
+        z-index: 4;
+        background-color: cornsilk;
+        position: relative;
+        top: 21px;
+        display: none;
+        gap: 0px;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        transition: all 0.5s ease-out;
+        overflow: hidden;
+        max-height: 0;
+        
+      }
+
+      .register,.login{
+        display: none;
+      }
+    
+      .hamburger {
+        display: flex;
+        /* justify-content: flex-end; */
+      }
+    
+
+      .toggle-checkbox:checked + .hamburger + .navbar-menu {
+        display: flex;
+        max-height: 300px; /* Adjust according to the number of items */
+      }
+
+
+
+    .container{
+        flex-direction: column;
+        bottom: 552px;
+    }
+    .left{
+        width: 80%;
+    }
+
+    .right{
+        width: 80%;
+    }
+    .browser{
+        flex-direction: column;
+        height: auto;
+        /* flex-wrap: nowrap; */
+        /* height: 0px; */
+    }
+  
+}
